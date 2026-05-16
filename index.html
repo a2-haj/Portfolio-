@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,6 @@
       padding: 2rem 1.5rem;
     }
 
-    /* Header / Nav */
     header {
       border-bottom: 1px solid #1f2a3a;
       background: #0c0f14;
@@ -69,7 +68,6 @@
       color: #4c9aff;
     }
 
-    /* Buttons & badges */
     .btn {
       display: inline-block;
       background: #1e2a3a;
@@ -104,6 +102,12 @@
       margin-bottom: 0.5rem;
     }
 
+    .badge-completed {
+      background: #0f2e1f;
+      color: #4ade80;
+      border: 1px solid #22c55e;
+    }
+
     .section {
       margin-bottom: 4rem;
     }
@@ -116,7 +120,6 @@
       padding-left: 1.2rem;
     }
 
-    /* Hero */
     .hero {
       display: flex;
       flex-direction: column;
@@ -138,7 +141,6 @@
       color: #8b9dc3;
     }
 
-    /* Grid */
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -204,6 +206,11 @@
       margin-top: 1rem;
     }
 
+    .checkmark {
+      color: #22c55e;
+      margin-right: 0.5rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 0;
@@ -244,7 +251,7 @@
   <!-- Hero Section -->
   <div class="hero">
     <h1>Ahmed Ali</h1>
-    <div class="hero-tag">Aspiring SOC Analyst | Cybersecurity Student | Problem Solver</div>
+    <div class="hero-tag">Aspiring SOC Analyst | Google Cybersecurity Certified | Problem Solver</div>
     <div>
       <a href="#contact" class="btn btn-primary">Get in touch</a>
       <a href="https://github.com/a2-haj" target="_blank" class="btn">GitHub</a>
@@ -260,7 +267,7 @@
         <h3>👋 About me</h3>
         <p>I'm a highly motivated individual currently studying GCSEs and working toward a Computer Science degree with a focus on <strong>cybersecurity</strong>. With 4+ years of experience as an e-bike technician, I bring strong diagnostic thinking, attention to detail, and a systematic approach to problem-solving — skills that translate directly to security analysis.</p>
         <br>
-        <p>I'm currently completing the <strong>Google Cybersecurity Professional Certificate</strong> and preparing for <strong>CompTIA Security+</strong>. My goal is to protect systems, data, and people from real-world threats.</p>
+        <p>I recently completed the <strong>Google Cybersecurity Professional Certificate</strong> (May 2026) and am now preparing for <strong>CompTIA Security+</strong>. My goal is to protect systems, data, and people from real-world threats.</p>
       </div>
       <div class="card">
         <h3>🛠️ Transferable skills</h3>
@@ -284,7 +291,7 @@
         <span class="badge">Wireshark (learning)</span>
         <span class="badge">Nmap (basic)</span>
         <span class="badge">Python (basics)</span>
-        <span class="badge">SIAM / SOC concepts</span>
+        <span class="badge">SIEM concepts</span>
         <span class="badge">Phishing analysis</span>
         <span class="badge">Threat intel news</span>
       </div>
@@ -293,17 +300,19 @@
     </div>
   </section>
 
-  <!-- Certifications in progress -->
+  <!-- Certifications -->
   <section id="certs" class="section">
-    <h2 class="section-title">Certifications (in progress)</h2>
+    <h2 class="section-title">Certifications</h2>
     <div class="grid-2">
       <div class="card">
-        <h3>📘 Google Cybersecurity</h3>
-        <p>Professional Certificate — currently working through risk assessment, Python, Linux, and SIEM tools.</p>
+        <h3><span class="checkmark">✅</span> Google Cybersecurity</h3>
+        <p>Professional Certificate — <strong>Completed (May 2026)</strong></p>
+        <p style="font-size: 0.85rem; color: #9bb7d4; margin-top: 0.5rem;">Topics: Python, Linux, SIEM, NIST framework, incident detection & response</p>
       </div>
       <div class="card">
         <h3>🔒 CompTIA Security+ (SY0-701)</h3>
-        <p>Self-studying — covering threats, cryptography, network security, and incident response.</p>
+        <p>In progress — studying threats, cryptography, network security, and incident response</p>
+        <span class="badge">📖 Studying</span>
       </div>
       <div class="card">
         <h3>📜 Functional Skills Level 1</h3>
@@ -316,7 +325,7 @@
     </div>
   </section>
 
-  <!-- Labs & hands-on learning -->
+  <!-- Hands-on learning -->
   <section id="learning" class="section">
     <h2 class="section-title">Hands-on learning & labs</h2>
     <div class="card">
@@ -337,7 +346,7 @@
     </div>
   </section>
 
-  <!-- Work experience (transferable) -->
+  <!-- Work experience -->
   <section class="section">
     <h2 class="section-title">Experience (technical + diagnostic)</h2>
     <div class="card">
@@ -359,7 +368,7 @@
     </div>
   </section>
 
-  <!-- Contact & Links -->
+  <!-- Contact -->
   <section id="contact" class="section">
     <h2 class="section-title">Connect with me</h2>
     <div class="card">
@@ -377,7 +386,7 @@
 
 <footer>
   <div class="container">
-    <p>Ahmed Ali — Aspiring SOC Analyst | Built with focus on continuous learning & cybersecurity fundamentals</p>
+    <p>Ahmed Ali — Google Cybersecurity Certified | Aspiring SOC Analyst</p>
   </div>
 </footer>
 
