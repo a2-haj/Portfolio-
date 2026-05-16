@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Ali | Aspiring SOC Analyst</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0c10;
+      font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+      color: #e5e9f0;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Header / Nav */
+    header {
+      border-bottom: 1px solid #1f2a3a;
+      background: #0c0f14;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: -0.3px;
+      background: linear-gradient(135deg, #4c9aff, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #b3c7e3;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #4c9aff;
+    }
+
+    /* Buttons & badges */
+    .btn {
+      display: inline-block;
+      background: #1e2a3a;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      border: 1px solid #2d3e50;
+    }
+
+    .btn-primary {
+      background: #1e3a5f;
+      border-color: #4c9aff;
+    }
+
+    .btn-primary:hover {
+      background: #2b4c7a;
+      transform: translateY(-2px);
+    }
+
+    .badge {
+      background: #16212b;
+      padding: 0.25rem 0.75rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      color: #9bb7d4;
+      display: inline-block;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1.8rem;
+      border-left: 4px solid #4c9aff;
+      padding-left: 1.2rem;
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ffffff, #94a3b8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-tag {
+      font-size: 1.2rem;
+      color: #8b9dc3;
+    }
+
+    /* Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #11161f;
+      border-radius: 20px;
+      padding: 1.5rem;
+      border: 1px solid #1f2a36;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      border-color: #2d4560;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #cddcec;
+    }
+
+    .skill-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .skill-list li {
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .skill-list li::before {
+      content: "▹";
+      color: #4c9aff;
+    }
+
+    .project-item {
+      margin-bottom: 1.4rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: #1e2a36;
+      margin: 1rem 0;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid #1f2a36;
+      margin-top: 2rem;
+      color: #6c7c8f;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <span class="logo">ahmedali.sec</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#certs">Certs</a>
+        <a href="#learning">Labs</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Ahmed Ali</h1>
+    <div class="hero-tag">Aspiring SOC Analyst | Cybersecurity Student | Problem Solver</div>
+    <div>
+      <a href="#contact" class="btn btn-primary">Get in touch</a>
+      <a href="https://github.com/a2-haj" target="_blank" class="btn">GitHub</a>
+      <a href="https://www.linkedin.com/in/ahmed-ali-7aa02b276" target="_blank" class="btn">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- About / Profile -->
+  <section id="about" class="section">
+    <h2 class="section-title">Profile</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>👋 About me</h3>
+        <p>I'm a highly motivated individual currently studying GCSEs and working toward a Computer Science degree with a focus on <strong>cybersecurity</strong>. With 4+ years of experience as an e-bike technician, I bring strong diagnostic thinking, attention to detail, and a systematic approach to problem-solving — skills that translate directly to security analysis.</p>
+        <br>
+        <p>I'm currently completing the <strong>Google Cybersecurity Professional Certificate</strong> and preparing for <strong>CompTIA Security+</strong>. My goal is to protect systems, data, and people from real-world threats.</p>
+      </div>
+      <div class="card">
+        <h3>🛠️ Transferable skills</h3>
+        <ul class="skill-list">
+          <li>Diagnostic troubleshooting (mechanical & electrical)</li>
+          <li>Risk awareness & safety procedures</li>
+          <li>Attention to detail & documentation</li>
+          <li>Customer communication & teamwork</li>
+          <li>Quick learner — technology & engineering</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Skills / Tech & Tools -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Security tools & interests</h2>
+    <div class="card">
+      <div>
+        <span class="badge">Linux (experimenting)</span>
+        <span class="badge">Wireshark (learning)</span>
+        <span class="badge">Nmap (basic)</span>
+        <span class="badge">Python (basics)</span>
+        <span class="badge">SIAM / SOC concepts</span>
+        <span class="badge">Phishing analysis</span>
+        <span class="badge">Threat intel news</span>
+      </div>
+      <br>
+      <p>🔍 Following <strong>The Hacker News</strong>, <strong>BleepingComputer</strong>, Brian Krebs, Troy Hunt to understand real-world incidents and vulnerabilities.</p>
+    </div>
+  </section>
+
+  <!-- Certifications in progress -->
+  <section id="certs" class="section">
+    <h2 class="section-title">Certifications (in progress)</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>📘 Google Cybersecurity</h3>
+        <p>Professional Certificate — currently working through risk assessment, Python, Linux, and SIEM tools.</p>
+      </div>
+      <div class="card">
+        <h3>🔒 CompTIA Security+ (SY0-701)</h3>
+        <p>Self-studying — covering threats, cryptography, network security, and incident response.</p>
+      </div>
+      <div class="card">
+        <h3>📜 Functional Skills Level 1</h3>
+        <p>English & Maths (AQA, completed July 2025)</p>
+      </div>
+      <div class="card">
+        <h3>🎓 GCSEs (pending 2026)</h3>
+        <p>English Language & Mathematics — AQA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Labs & hands-on learning -->
+  <section id="learning" class="section">
+    <h2 class="section-title">Hands-on learning & labs</h2>
+    <div class="card">
+      <div class="project-item">
+        <div class="project-title">🐧 Linux environment</div>
+        <p>Installed and configured Linux (Ubuntu/Kali) in a virtual machine to understand file systems, permissions, and basic command-line security practices.</p>
+      </div>
+      <hr>
+      <div class="project-item">
+        <div class="project-title">🛡️ Cybersecurity news & research</div>
+        <p>Daily reading of The Hacker News, BleepingComputer, Krebs on Security to track CVEs, data breaches, and attack patterns.</p>
+      </div>
+      <hr>
+      <div class="project-item">
+        <div class="project-title">📡 Next steps (planned)</div>
+        <p>TryHackMe Pre-Security & Blue Team labs / Hack The Box Academy — building SOC simulation skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work experience (transferable) -->
+  <section class="section">
+    <h2 class="section-title">Experience (technical + diagnostic)</h2>
+    <div class="card">
+      <h3>E-bike Technician | Green Wheel E-bike (Jan 2025 – Nov 2025)</h3>
+      <p>Diagnosed electrical and mechanical faults, performed safety checks, and ensured high-quality repairs. Developed systematic troubleshooting and risk assessment — directly applicable to security analysis workflows.</p>
+    </div>
+    <div class="card" style="margin-top: 1rem;">
+      <h3>Motorbike & E-bike Technician | Tropicana Cycle Company (2017–2021)</h3>
+      <p>Repaired complex systems, documented repairs, and maintained safety standards. Strong foundation in methodical diagnosis and customer-facing communication.</p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section">
+    <h2 class="section-title">Education & university applications</h2>
+    <div class="card">
+      <p><strong>GCSE Studies</strong> (currently) — working toward Computer Science degree entry requirements.</p>
+      <p><strong>Applied foundation programmes:</strong> Aston University, Birmingham City University, Coventry University, Newman University, University of Wolverhampton — all with <strong>Cyber Security / Foundation Year</strong> pathways.</p>
+    </div>
+  </section>
+
+  <!-- Contact & Links -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Connect with me</h2>
+    <div class="card">
+      <p>📧 <strong>Email:</strong> <a href="mailto:ahhmmdalhaj@gmail.com" style="color:#4c9aff;">ahhmmdalhaj@gmail.com</a></p>
+      <p>📞 <strong>Phone:</strong> 07473 123315</p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/ahmed-ali-7aa02b276" target="_blank" class="btn">LinkedIn</a>
+        <a href="https://github.com/a2-haj" target="_blank" class="btn">GitHub</a>
+      </div>
+      <br>
+      <p><em>Open to entry-level IT / security roles, shadowing, or lab collaborations.</em></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Ahmed Ali — Aspiring SOC Analyst | Built with focus on continuous learning & cybersecurity fundamentals</p>
+  </div>
+</footer>
+
+</body>
+</html>
