@@ -1,424 +1,449 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Ahmed Ali | Aspiring SOC Analyst Portfolio</title>
-    <meta name="description" content="Portfolio of Ahmed Ali, a Foundation Year computing student at the University of Wolverhampton focused on cybersecurity and SOC skills.">
-    
-    <!-- Open Graph (OG) Tags for Social Media (LinkedIn, WhatsApp, etc.) -->
-    <meta property="og:title" content="Ahmed Ali | Aspiring SOC Analyst Portfolio">
-    <meta property="og:description" content="Foundation Year computing student focused on cybersecurity, SOC labs, and applied incident-response skills.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://github.com/a2-haj/Portfolio-">
-    <meta property="og:image" content="https://raw.githubusercontent.com/a2-haj/Portfolio-/main/og-image.png"> 
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Google Fonts (Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* [Classic Palette Configuration] */
-        :root {
-            --bg-color: #fafbfc;          
-            --card-bg-color: #ffffff;      
-            --text-color: #0c0f14;       
-            --header-bg-color: #0a0c10;  
-            --accent-gold: #c6a066;      
-            --accent-gold-light: #e6c18d; 
-            --header-link-color: #e5e9f0; 
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: var(--bg-color);
-            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-            color: var(--text-color);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-        header {
-            border-bottom: 1px solid #1f2a3a;
-            background: var(--header-bg-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .logo {
-            font-weight: 700;
-            font-size: 1.4rem;
-            letter-spacing: -0.3px;
-            color: var(--accent-gold); 
-        }
-        .nav-links {
-            display: flex;
-            gap: 1.8rem;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            color: var(--header-link-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover {
-            color: var(--accent-gold); 
-        }
-        .btn {
-            display: inline-block;
-            color: #0a0c10;
-            padding: 0.5rem 1.2rem;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.2s ease-in-out;
-            border: 1px solid transparent;
-            background: #ffffff; 
-        }
-        .btn:hover {
-            background: #ffffff;
-            border-color: var(--accent-gold); 
-            transform: translateY(-2px);
-        }
-        .btn-primary {
-            background: #0c0f14; 
-            color: #ffffff;
-            border-color: transparent;
-        }
-        .btn-primary:hover {
-            background: var(--accent-gold); 
-            color: #0c0f14;
-        }
-        .badge {
-            background: #eeeeee;
-            padding: 0.25rem 0.75rem;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            color: #4a5568;
-            display: inline-block;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            border: 1px solid transparent;
-        }
-        .section {
-            margin-bottom: 4rem;
-        }
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 1.8rem;
-            border-left: 4px solid var(--accent-gold); 
-            padding-left: 1.2rem;
-            color: #000000;
-        }
-        .hero {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-            text-align: left;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #000000; 
-        }
-        .hero-tag {
-            font-size: 1.2rem;
-            color: #4a5568; 
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .card {
-            background: var(--card-bg-color);
-            border-radius: 20px;
-            padding: 1.5rem;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease-in-out;
-        }
-        /* تأثير الـ Hover المطور للبطاقات بتناغم كلاسيكي ذهبي */
-        .card:hover {
-            border-color: var(--accent-gold); 
-            box-shadow: 0 10px 20px rgba(198, 160, 102, 0.08);
-            transform: translateY(-4px);
-        }
-        .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: #0c0f14;
-        }
-        .card strong {
-            color: #000000;
-        }
-        .skill-list {
-            list-style: none;
-        }
-        .skill-list li {
-            margin-bottom: 0.6rem;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-        .skill-list li::before {
-            content: "▹";
-            color: var(--accent-gold); 
-        }
-        .project-item {
-            margin-bottom: 1.4rem;
-        }
-        .project-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-        hr {
-            border: none;
-            height: 1px;
-            background: #e2e8f0;
-            margin: 1rem 0;
-        }
-        .contact-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        .checkmark {
-            color: var(--accent-gold); 
-            margin-right: 0.5rem;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid #1f2a36;
-            margin-top: 2rem;
-            color: #b3c7e3;
-            font-size: 0.85rem;
-            background: var(--header-bg-color); 
-        }
-        footer .container p {
-            color: #eeeeee;
-        }
-        .contact-detail a {
-            color: #000000;
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .contact-detail a:hover {
-            color: var(--accent-gold);
-        }
-        @media (max-width: 700px) {
-            .hero h1 { font-size: 2.2rem; }
-            .section-title { font-size: 1.5rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO Meta Tags -->
+<title>Ahmed Ali | Aspiring SOC Analyst Portfolio</title>
+<meta name="description" content="Portfolio of Ahmed Ali, an aspiring SOC Analyst and Google Cybersecurity certified professional with a strong background in technical diagnostics.">
+<!-- Open Graph (OG) Tags for Social Media (LinkedIn, WhatsApp, etc.) -->
+<meta property="og:title" content="Ahmed Ali | Aspiring SOC Analyst Portfolio">
+<meta property="og:description" content="Google Cybersecurity certified professional looking toward blue team roles and computer science pathways.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/a2-haj/Portfolio-">
+<meta property="og:image" content="https://raw.githubusercontent.com/a2-haj/Portfolio-/main/og-image.png">
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- Google Fonts (Inter) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* [Classic Palette Configuration] */
+:root {
+--bg-color: #fafbfc;
+--card-bg-color: #ffffff;
+--text-color: #0c0f14;
+--header-bg-color: #0a0c10;
+--accent-gold: #c6a066;
+--accent-gold-light: #e6c18d;
+--header-link-color: #e5e9f0;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+background: var(--bg-color);
+font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+color: var(--text-color);
+line-height: 1.6;
+scroll-behavior: smooth;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 2rem 1.5rem;
+}
+header {
+border-bottom: 1px solid #1f2a3a;
+background: var(--header-bg-color);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+.nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 1rem;
+}
+.logo {
+font-weight: 700;
+font-size: 1.4rem;
+letter-spacing: -0.3px;
+color: var(--accent-gold);
+}
+.nav-links {
+display: flex;
+gap: 1.8rem;
+flex-wrap: wrap;
+}
+.nav-links a {
+color: var(--header-link-color);
+text-decoration: none;
+font-weight: 500;
+transition: color 0.2s;
+}
+.nav-links a:hover {
+color: var(--accent-gold);
+}
+.btn {
+display: inline-block;
+color: #0a0c10;
+padding: 0.5rem 1.2rem;
+border-radius: 40px;
+text-decoration: none;
+font-weight: 600;
+font-size: 0.9rem;
+transition: all 0.2s ease-in-out;
+border: 1px solid transparent;
+background: #ffffff;
+}
+.btn:hover {
+background: #ffffff;
+border-color: var(--accent-gold);
+transform: translateY(-2px);
+}
+.btn-primary {
+background: #0c0f14;
+color: #ffffff;
+border-color: transparent;
+}
+.btn-primary:hover {
+background: var(--accent-gold);
+color: #0c0f14;
+}
+.badge {
+background: #eeeeee;
+padding: 0.25rem 0.75rem;
+border-radius: 30px;
+font-size: 0.8rem;
+color: #4a5568;
+display: inline-block;
+margin-right: 0.5rem;
+margin-bottom: 0.5rem;
+border: 1px solid transparent;
+}
+.section {
+margin-bottom: 4rem;
+}
+.section-title {
+font-size: 1.8rem;
+font-weight: 600;
+margin-bottom: 1.8rem;
+border-left: 4px solid var(--accent-gold);
+padding-left: 1.2rem;
+color: #000000;
+}
+.hero {
+display: flex;
+flex-direction: column;
+gap: 1.2rem;
+margin-bottom: 3rem;
+padding: 2rem 0;
+text-align: left;
+}
+.hero h1 {
+font-size: 3rem;
+font-weight: 700;
+color: #000000;
+}
+.hero-tag {
+font-size: 1.2rem;
+color: #4a5568;
+}
+.grid-2 {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+}
+.card {
+background: var(--card-bg-color);
+border-radius: 20px;
+padding: 1.5rem;
+border: 1px solid #e2e8f0;
+transition: all 0.3s ease-in-out;
+}
+/* تأثير الـ Hover المطور للبطاقات بتناغم كلاسيكي ذهبي */
+.card:hover {
+border-color: var(--accent-gold);
+box-shadow: 0 10px 20px rgba(198, 160, 102, 0.08);
+transform: translateY(-4px);
+}
+.card h3 {
+font-size: 1.4rem;
+margin-bottom: 1rem;
+color: #0c0f14;
+}
+.card strong {
+color: #000000;
+}
+.skill-list {
+list-style: none;
+}
+.skill-list li {
+margin-bottom: 0.6rem;
+display: flex;
+align-items: center;
+gap: 0.6rem;
+}
+.skill-list li::before {
+content: "▹";
+color: var(--accent-gold);
+}
+.project-item {
+margin-bottom: 1.4rem;
+}
+.project-title {
+font-weight: 600;
+font-size: 1.1rem;
+margin-bottom: 0.3rem;
+}
+hr {
+border: none;
+height: 1px;
+background: #e2e8f0;
+margin: 1rem 0;
+}
+.contact-links {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+margin-top: 1rem;
+}
+.checkmark {
+color: var(--accent-gold);
+margin-right: 0.5rem;
+}
+footer {
+text-align: center;
+padding: 2rem 0;
+border-top: 1px solid #1f2a36;
+margin-top: 2rem;
+color: #b3c7e3;
+font-size: 0.85rem;
+background: var(--header-bg-color);
+}
+footer .container p {
+color: #eeeeee;
+}
+.contact-detail a {
+color: #000000;
+font-weight: 600;
+text-decoration: none;
+transition: color 0.2s;
+}
+.contact-detail a:hover {
+color: var(--accent-gold);
+}
+@media (max-width: 700px) {
+.hero h1 { font-size: 2.2rem; }
+.section-title { font-size: 1.5rem; }
+}
+</style>
 </head>
 <body>
-
 <header>
-    <div class="container">
-        <nav class="nav" aria-label="Main Navigation">
-            <span class="logo">Ahmed_Ali.sec</span>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#certs">Certs</a>
-                <a href="#learning">Labs</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </div>
+<div class="container">
+<nav class="nav" aria-label="Main Navigation">
+<span class="logo">Ahmed_Ali.sec</span>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#certs">Certs</a>
+<a href="#learning">Labs</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</div>
 </header>
 
 <main class="container">
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Ahmed Ali</h1>
-        <div class="hero-tag">Aspiring SOC Analyst | Google Cybersecurity Certified | Problem Solver</div>
-        <div class="contact-links">
-            <a href="#contact" class="btn btn-primary">Get in touch</a>
-            <a href="https://github.com/a2-haj" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
-            <a href="https://www.linkedin.com/in/ahmed-ali-7aa02b276" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
-        </div>
-    </section>
 
-    <!-- About / Profile -->
-    <section id="about" class="section">
-        <h2 class="section-title">Profile</h2>
-        <div class="grid-2">
-            <div class="card">
-                <h3>👋 About me</h3>
-                <p>I'm a computing student currently in my Foundation Year at University of Wolverhampton, pursuing a BSc Computer Science with a focus on cybersecurity. I recently completed the Google Cybersecurity Professional Certificate and my Level 3 Diploma in Cybersecurity &amp; Networking. With 4+ years of technical troubleshooting experience in the e-bike and motorcycle repair industry, I bring systematic problem-solving, attention to detail, and a methodical approach to security analysis.</p>
-                <br>
-                <p><strong>🗣️ Languages</strong></p>
-                <ul class="skill-list" style="margin-top: 0.5rem;">
-                    <li>Arabic: Native fluency</li>
-                    <li>English: Intermediate</li>
-                </ul>
-                <br>
-                <p>I recently completed the <strong>Google Cybersecurity Professional Certificate</strong> and am now preparing for <strong>CompTIA Security+</strong>. My goal is to protect systems, data, and people from real-world threats.</p>
-            </div>
-            <div class="card">
-                <h3>🛠️ Transferable skills</h3>
-                <ul class="skill-list">
-                    <li>Diagnostic troubleshooting (mechanical & electrical)</li>
-                    <li>Risk awareness & safety procedures</li>
-                    <li>Attention to detail & documentation</li>
-                    <li>Customer communication & teamwork</li>
-                    <li>Quick learner — technology & engineering</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<!-- Hero Section -->
+<section class="hero">
+<h1>Ahmed Ali</h1>
+<div class="hero-tag">Aspiring SOC Analyst | Google Cybersecurity Certified | Problem Solver</div>
+<div class="contact-links">
+<a href="#contact" class="btn btn-primary">Get in touch</a>
+<a href="https://github.com/a2-haj" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+<a href="https://www.linkedin.com/in/ahmed-ali-7aa02b276" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+</div>
+</section>
 
-    <!-- Key Skills / Tech & Tools -->
-    <section id="skills" class="section">
-        <h2 class="section-title">Security tools & interests</h2>
-        <div class="card">
-            <div>
-                <span class="badge">Linux (experimenting)</span>
-                <span class="badge">Wireshark (learning)</span>
-                <span class="badge">Nmap (basic)</span>
-                <span class="badge">Python (basics)</span>
-                <span class="badge">SIEM concepts</span>
-                <span class="badge">Phishing analysis</span>
-                <span class="badge">Threat intel news</span>
-            </div>
-            <br>
-            <p>🔍 Following <strong>The Hacker News</strong>, <strong>BleepingComputer</strong>, Brian Krebs, Troy Hunt to understand real-world incidents and vulnerabilities.</p>
-        </div>
-    </section>
+<!-- About / Profile -->
+<section id="about" class="section">
+<h2 class="section-title">Profile</h2>
+<div class="grid-2">
+<div class="card">
+<h3>About me</h3>
+<p>I'm a computing student currently in my <strong>Foundation Year at University of Wolverhampton</strong>, pursuing a BSc Computer Science with a focus on cybersecurity. I recently completed the <strong>Google Cybersecurity Professional Certificate</strong> and my <strong>Level 3 Diploma in Cybersecurity & Networking</strong>. With 4+ years of technical troubleshooting experience in the e-bike and motorcycle repair industry, I bring systematic problem-solving, attention to detail, and a methodical approach to security analysis.</p>
 
-    <!-- Certifications -->
-    <section id="certs" class="section">
-        <h2 class="section-title">Certifications</h2>
-        <div class="grid-2">
-            <div class="card">
-                <h3><span class="checkmark">✅</span> Google Cybersecurity</h3>
-                <p>Professional Certificate — <strong>Completed</strong></p>
-                <p style="font-size: 0.85rem; color: #4a5568; margin-top: 0.5rem;">Topics: Python, Linux, SIEM, NIST framework, incident detection & response</p>
-            </div>
-            <div class="card">
-                <h3>🎓 Level 3 Diploma in Cybersecurity &amp; Networking</h3>
-                <p>Back to Work / Gateway Qualifications — <strong>Completed 2026</strong></p>
-            </div>
-            <div class="card">
-                <h3>🔒 CompTIA Security+ (SY0-701)</h3>
-                <p>In progress — studying threats, cryptography, network security, and incident response</p>
-                <span class="badge" style="background: #0c0f14; color: #ffffff; margin-top:0.5rem;">📖 Studying</span>
-            </div>
-            <div class="card">
-                <h3>📜 Functional Skills Level 1</h3>
-                <p>English & Maths (AQA, completed July 2025)</p>
-            </div>
-            <div class="card">
-                <h3>🎓 GCSEs (pending)</h3>
-                <p>English Language & Mathematics — AQA</p>
-            </div>
-        </div>
-    </section>
+<br>
 
-    <!-- Hands-on learning -->
-    <section id="learning" class="section">
-        <h2 class="section-title">Hands-on learning & labs</h2>
-        <div class="card">
-            <div class="project-item">
-                <div class="project-title">🐧 Linux environment</div>
-                <p>Installed and configured Linux (Ubuntu/Kali) in a virtual machine to understand file systems, permissions, and basic command-line security practices.</p>
-            </div>
-            <hr>
-            <div class="project-item">
-                <div class="project-title">🛡️ Cybersecurity news & research</div>
-                <p>Daily reading of The Hacker News, BleepingComputer, Krebs on Security to track CVEs, data breaches, and attack patterns.</p>
-            </div>
-            <hr>
-            <div class="project-item">
-                <div class="project-title">📡 Current focus</div>
-                <p>Completing TryHackMe Pre-Security pathway and Blue Team labs / Hack The Box Academy — building applied SOC simulation skills as part of Foundation Year studies.</p>
-            </div>
-        </div>
-    </section>
+<p>I am now preparing for <strong>CompTIA Security+</strong> and building practical skills through hands-on labs and real-world threat intelligence monitoring. My goal is to protect systems, data, and people from real-world threats.</p>
+</div>
 
-    <!-- Work experience -->
-    <section id="experience" class="section">
-        <h2 class="section-title">Experience (technical + diagnostic)</h2>
-        <div class="grid-2">
-            <div class="card">
-                <h3>E-bike Technician</h3>
-                <p><strong>Hyena E-bikes, Birmingham</strong> (2024–2025)</p>
-                <ul class="skill-list" style="margin-top: 0.5rem;">
-                    <li>Diagnosed electrical and mechanical faults, performed safety checks, and ensured high-quality repairs.</li>
-                    <li>Diagnosed and resolved mechanical and electrical issues using systematic troubleshooting—skills directly applicable to security incident response.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Motorbike & E-bike Technician</h3>
-                <p><strong>Tropicana Cycle Company</strong> (2017–2021)</p>
-                <p style="margin-top: 0.5rem;">Repaired complex systems, documented repairs, and maintained safety standards. Strong foundation in methodical diagnosis and customer-facing communication.</p>
-            </div>
-        </div>
-    </section>
+<div class="card">
+<h3>Transferable skills</h3>
+<ul class="skill-list">
+<li>Diagnostic troubleshooting (mechanical & electrical)</li>
+<li>Risk awareness & safety procedures</li>
+<li>Attention to detail & documentation</li>
+<li>Customer communication & teamwork</li>
+<li>Quick learner — technology & engineering</li>
+</ul>
 
-    <!-- Education -->
-    <section id="education" class="section">
-        <h2 class="section-title">Education</h2>
-        <div class="card">
-            <p><strong>BSc Computer Science (Foundation Year)</strong>, University of Wolverhampton — Starting September 2026</p>
-            <p style="margin-top: 0.5rem;"><strong>Level 3 Diploma in Cybersecurity &amp; Networking</strong>, Back to Work / Gateway Qualifications — Completed 2026</p>
-            <p style="margin-top: 0.5rem;"><strong>GCSE English &amp; Mathematics</strong>, AQA — Completed 2026</p>
-        </div>
-    </section>
+<br>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Connect with me</h2>
-        <div class="card">
-            <p class="contact-detail">📧 <strong>Email:</strong> <a href="mailto:ahhmmdalhaj@gmail.com">ahhmmdalhaj@gmail.com</a></p>
-          
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/ahmed-ali-7aa02b276" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
-                <a href="https://github.com/a2-haj" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
-            </div>
-            <br>
-            <p><em>Open to entry-level IT / security roles, shadowing, or lab collaborations.</em></p>
-        </div>
-    </section>
+<h3>Languages</h3>
+<ul class="skill-list">
+<li>Arabic: Native fluency</li>
+<li>English: Intermediate</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Key Skills / Tech & Tools -->
+<section id="skills" class="section">
+<h2 class="section-title">Security tools & interests</h2>
+<div class="card">
+<div>
+<span class="badge">Linux (experimenting)</span>
+<span class="badge">Wireshark (learning)</span>
+<span class="badge">Nmap (basic)</span>
+<span class="badge">Python (basics)</span>
+<span class="badge">SIEM concepts</span>
+<span class="badge">Phishing analysis</span>
+<span class="badge">Threat intel news</span>
+</div>
+
+<br>
+
+<p>Following: <strong>The Hacker News</strong>, <strong>BleepingComputer</strong>, Brian Krebs, Troy Hunt to understand real-world incidents and vulnerabilities.</p>
+</div>
+</section>
+
+<!-- Certifications -->
+<section id="certs" class="section">
+<h2 class="section-title">Certifications</h2>
+<div class="grid-2">
+
+<div class="card">
+<h3>Completed: Google Cybersecurity</h3>
+<p>Professional Certificate — <strong>Completed</strong></p>
+<p style="font-size: 0.85rem; color: #4a5568; margin-top: 0.5rem;">Topics: Python, Linux, SIEM, NIST framework, incident detection & response</p>
+</div>
+
+<div class="card">
+<h3>Completed: Level 3 Diploma in Cybersecurity & Networking</h3>
+<p>Back to Work / Gateway Qualifications — <strong>Completed 2026</strong></p>
+<p style="font-size: 0.85rem; color: #4a5568; margin-top: 0.5rem;">Network security, risk management, digital safety, and cybersecurity fundamentals</p>
+</div>
+
+<div class="card">
+<h3>CompTIA Security+ (SY0-701)</h3>
+<p>In progress — studying threats, cryptography, network security, and incident response</p>
+<span class="badge" style="background: #0c0f14; color: #ffffff; margin-top:0.5rem;">Studying</span>
+</div>
+
+<div class="card">
+<h3>GCSE English & Mathematics</h3>
+<p>AQA — <strong>Completed 2026</strong></p>
+</div>
+
+</div>
+</section>
+
+<!-- Hands-on learning -->
+<section id="learning" class="section">
+<h2 class="section-title">Hands-on learning & labs</h2>
+<div class="card">
+
+<div class="project-item">
+<div class="project-title">Linux environment</div>
+<p>Installed and configured Linux (Ubuntu/Kali) in a virtual machine to understand file systems, permissions, and basic command-line security practices.</p>
+</div>
+
+<hr>
+
+<div class="project-item">
+<div class="project-title">Cybersecurity news & research</div>
+<p>Daily reading of The Hacker News, BleepingComputer, Krebs on Security to track CVEs, data breaches, and attack patterns.</p>
+</div>
+
+<hr>
+
+<div class="project-item">
+<div class="project-title">Current focus</div>
+<p>Completing TryHackMe Pre-Security pathway and Blue Team labs / Hack The Box Academy — building applied SOC simulation skills as part of Foundation Year studies.</p>
+</div>
+
+</div>
+</section>
+
+<!-- Work experience -->
+<section id="experience" class="section">
+<h2 class="section-title">Experience (technical + diagnostic)</h2>
+<div class="grid-2">
+
+<div class="card">
+<h3>Bicycle & E-Bike Mechanic</h3>
+<p><strong>Hyena E-bikes, Birmingham</strong> (2024–2025)</p>
+<p style="margin-top: 0.5rem;">Diagnosed and resolved mechanical and electrical issues using systematic troubleshooting. Performed maintenance and repairs on bicycles, electric bikes, and related components. Maintained accurate service records and customer documentation. Skills directly applicable to security incident response and problem-solving workflows.</p>
+</div>
+
+<div class="card">
+<h3>Motorbike & Bicycle Mechanic</h3>
+<p><strong>Tropicana Cycle Company</strong> (2017–2021)</p>
+<p style="margin-top: 0.5rem;">Completed routine and complex repairs on motorbikes and bicycles. Conducted regular maintenance services and installed/repaired components including gears, suspension systems, and lighting. Maintained organized workshop environment following health and safety procedures. Strong foundation in methodical diagnosis and customer-facing communication.</p>
+</div>
+
+</div>
+</section>
+
+<!-- Education -->
+<section id="education" class="section">
+<h2 class="section-title">Education</h2>
+<div class="card">
+
+<p><strong>BSc Computer Science (Foundation Year)</strong></p>
+<p style="margin-top: 0.5rem;">University of Wolverhampton — Starting September 2026</p>
+
+<hr>
+
+<p><strong>Level 3 Diploma in Cybersecurity & Networking</strong></p>
+<p style="margin-top: 0.5rem;">Back to Work / Gateway Qualifications — Completed 2026</p>
+
+<hr>
+
+<p><strong>GCSE English & Mathematics</strong></p>
+<p style="margin-top: 0.5rem;">AQA — Completed 2026</p>
+
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+<h2 class="section-title">Connect with me</h2>
+<div class="card">
+
+<p class="contact-detail">Email: <a href="mailto:ahhmmdalhaj@gmail.com">ahhmmdalhaj@gmail.com</a></p>
+
+<div class="contact-links">
+<a href="https://www.linkedin.com/in/ahmed-ali-7aa02b276" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+<a href="https://github.com/a2-haj" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+</div>
+
+<br>
+
+<p><em>Open to entry-level IT / security roles, shadowing, or lab collaborations.</em></p>
+
+</div>
+</section>
+
 </main>
 
 <footer>
-    <div class="container">
-        <p>Ahmed Ali — Google Cybersecurity Certified | Aspiring SOC Analyst</p>
-    </div>
+<div class="container">
+<p>Ahmed Ali — Google Cybersecurity Certified | Foundation Year Student</p>
+</div>
 </footer>
 
 </body>
